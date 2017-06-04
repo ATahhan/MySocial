@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +21,111 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7BJ-v3-TdP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="robot" translatesAutoresizingMaskIntoConstraints="NO" id="det-xk-Vgl">
+                                        <rect key="frame" x="100" y="25" width="175" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9137254901960784" green="0.11764705882352941" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="caQ-OT-eog"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8c-gg-MyT">
+                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you haven't signed yet, an account will be automatically created for you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIM-fm-CKD">
+                                        <rect key="frame" x="8" y="8" width="359" height="59"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.67843137254901964" green="0.078431372549019607" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="UIM-fm-CKD" secondAttribute="trailing" constant="8" id="9vc-6m-grT"/>
+                                    <constraint firstItem="UIM-fm-CKD" firstAttribute="top" secondItem="e8c-gg-MyT" secondAttribute="top" constant="8" id="U6n-dq-Hvi"/>
+                                    <constraint firstItem="UIM-fm-CKD" firstAttribute="leading" secondItem="e8c-gg-MyT" secondAttribute="leading" constant="8" id="VYO-We-AVe"/>
+                                    <constraint firstAttribute="height" constant="75" id="dqb-Y0-q2f"/>
+                                    <constraint firstAttribute="bottom" secondItem="UIM-fm-CKD" secondAttribute="bottom" constant="8" id="wrF-6v-GkP"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your prefered sign in option:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPJ-gE-ANd">
+                                <rect key="frame" x="16" y="166" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="LlN-sO-ynA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWd-0P-fvB">
+                                <rect key="frame" x="128" y="251" width="119" height="120"/>
+                                <color key="backgroundColor" red="0.25815653800964355" green="0.34579166769981384" blue="0.57655179500579834" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="ch3-Wt-9xe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="95"/>
+                                <state key="normal" title="f">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="arO-Ng-sdN">
+                                <rect key="frame" x="46" y="403" width="283" height="110"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGS-m8-u4n">
+                                        <rect key="frame" x="0.0" y="0.0" width="283" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ryB-jo-hAN">
+                                        <rect key="frame" x="0.0" y="40" width="283" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaL-7T-OQz">
+                                        <rect key="frame" x="0.0" y="80" width="283" height="30"/>
+                                        <color key="backgroundColor" red="0.24705882352941178" green="0.31764705882352939" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Sign in">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="arO-Ng-sdN" secondAttribute="trailing" constant="30" id="1t0-eN-WGE"/>
+                            <constraint firstItem="7BJ-v3-TdP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Edj-Dg-MJH"/>
+                            <constraint firstAttribute="trailing" secondItem="e8c-gg-MyT" secondAttribute="trailing" id="Egj-F6-Utl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e8c-gg-MyT" secondAttribute="bottom" id="EyX-PZ-p38"/>
+                            <constraint firstItem="vPJ-gE-ANd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JSk-bp-QUl"/>
+                            <constraint firstItem="eWd-0P-fvB" firstAttribute="top" secondItem="vPJ-gE-ANd" secondAttribute="bottom" constant="64" id="Jw8-gu-QZD"/>
+                            <constraint firstItem="arO-Ng-sdN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="K0o-Lf-mT0"/>
+                            <constraint firstItem="7BJ-v3-TdP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Kll-Xx-l6g"/>
+                            <constraint firstItem="arO-Ng-sdN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SMe-Iy-JEi"/>
+                            <constraint firstItem="e8c-gg-MyT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UAw-1d-GXq"/>
+                            <constraint firstItem="eWd-0P-fvB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="112" id="YlZ-6k-hEc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eWd-0P-fvB" secondAttribute="trailing" constant="112" id="YzC-2n-Va1"/>
+                            <constraint firstItem="vPJ-gE-ANd" firstAttribute="top" secondItem="7BJ-v3-TdP" secondAttribute="bottom" constant="16" id="ebx-B2-GHW"/>
+                            <constraint firstItem="arO-Ng-sdN" firstAttribute="top" secondItem="eWd-0P-fvB" secondAttribute="bottom" constant="32" id="wRO-rO-r15"/>
+                            <constraint firstAttribute="trailing" secondItem="7BJ-v3-TdP" secondAttribute="trailing" id="xJj-qU-iLP"/>
+                            <constraint firstItem="vPJ-gE-ANd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xXe-Ce-lJh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="robot" width="786" height="402"/>
+    </resources>
 </document>
