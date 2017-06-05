@@ -90,7 +90,7 @@
                                         <rect key="frame" x="0.0" y="31" width="283" height="21"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaL-7T-OQz" customClass="FancyButton" customModule="MySocial" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="62" width="283" height="30"/>
@@ -98,6 +98,9 @@
                                         <state key="normal" title="Sign in">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nI9-N1-wl7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -122,6 +125,10 @@
                             <constraint firstItem="vPJ-gE-ANd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xXe-Ce-lJh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="cGS-m8-u4n" id="bNp-ZS-4tQ"/>
+                        <outlet property="passwordField" destination="ryB-jo-hAN" id="4Ug-Hu-Asf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

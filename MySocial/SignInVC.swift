@@ -13,6 +13,8 @@ import Firebase
 
 class SignInVC: UIViewController {
 
+    @IBOutlet weak var emailField: FancyField!
+    @IBOutlet weak var passwordField: FancyField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,24 @@ class SignInVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func signInButtonPressed(_ sender: Any) {
+        if let email = emailField.text, let password = passwordField.text{
+            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+                if error == nil {
+                    print("User authenticated with firebase")
+                } else {
+                    Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+                        if error != nil {
+                            print("Unable to authenticate with firebase (creation)")
+                        } else {
+                            print("Succesfully authenticated with firebase (creation)")
+                        }
+                    })
+                }
+            })
+        }
     }
     
     @IBAction func fbButtonPressed(_ sender: Any) {
