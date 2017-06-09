@@ -33,7 +33,8 @@ class SignInVC: UIViewController {
                 if error == nil {
                     print("User authenticated with firebase")
                     if let user = user {
-                        self.saveSignIn(id: user.uid)
+                        let userData = ["provider": user.providerID]
+                        self.saveSignIn(id: user.uid, userData: userData)
                     }
                 } else {
                     Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
@@ -42,7 +43,8 @@ class SignInVC: UIViewController {
                         } else {
                             print("Succesfully authenticated with firebase (creation)")
                             if let user = user {
-                                self.saveSignIn(id: user.uid)
+                                let userData = ["provider": user.providerID]
+                                self.saveSignIn(id: user.uid, userData: userData)
                             }
                         }
                     })
@@ -75,13 +77,15 @@ class SignInVC: UIViewController {
             } else {
                 print("Succesfully authenticated with firebase")
                 if let user = user {
-                    self.saveSignIn(id: user.uid)
+                    let userData = ["provider": credential.provider]
+                    self.saveSignIn(id: user.uid, userData: userData)
                 }
             }
         })
     }
     
-    func saveSignIn(id: String) {
+    func saveSignIn(id: String, userData: Dictionary<String, String>) {
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let result = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("Data saved to keychain \(result)")
         performSegue(withIdentifier: "goToFeed", sender: nil)

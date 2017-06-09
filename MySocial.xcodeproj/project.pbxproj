@@ -22,6 +22,7 @@
 		D632EC481EE61BCE005836F5 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632EC471EE61BCE005836F5 /* FeedVC.swift */; };
 		D632EC4A1EE6E89D005836F5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632EC491EE6E89D005836F5 /* CircleView.swift */; };
 		D632EC4C1EE6FCDC005836F5 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632EC4B1EE6FCDC005836F5 /* PostCell.swift */; };
+		D670632C1EE9E0E900E80D13 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D670632B1EE9E0E900E80D13 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		D632EC471EE61BCE005836F5 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		D632EC491EE6E89D005836F5 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		D632EC4B1EE6FCDC005836F5 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		D670632B1EE9E0E900E80D13 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		D632EC221EE42C4A005836F5 /* MySocial */ = {
 			isa = PBXGroup;
 			children = (
+				D670632A1EE9E0CB00E80D13 /* Services */,
 				D632EC3E1EE4C574005836F5 /* Utilities */,
 				D632EC371EE42FCA005836F5 /* Model */,
 				D632EC391EE42FD4005836F5 /* Controller */,
@@ -145,6 +148,14 @@
 				D632EC3F1EE4C584005836F5 /* Constants.swift */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		D670632A1EE9E0CB00E80D13 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D670632B1EE9E0E900E80D13 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +287,7 @@
 				D632EC261EE42C4A005836F5 /* SignInVC.swift in Sources */,
 				D632EC421EE4D1B4005836F5 /* RoundButton.swift in Sources */,
 				D632EC461EE4D516005836F5 /* FancyButton.swift in Sources */,
+				D670632C1EE9E0E900E80D13 /* DataService.swift in Sources */,
 				D632EC481EE61BCE005836F5 /* FeedVC.swift in Sources */,
 				D632EC241EE42C4A005836F5 /* AppDelegate.swift in Sources */,
 				D632EC3D1EE4C3FD005836F5 /* FancyView.swift in Sources */,
