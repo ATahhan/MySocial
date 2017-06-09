@@ -23,6 +23,7 @@
 		D632EC4A1EE6E89D005836F5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632EC491EE6E89D005836F5 /* CircleView.swift */; };
 		D632EC4C1EE6FCDC005836F5 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632EC4B1EE6FCDC005836F5 /* PostCell.swift */; };
 		D670632C1EE9E0E900E80D13 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D670632B1EE9E0E900E80D13 /* DataService.swift */; };
+		D6BB7D8C1EEAE9DC00445626 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB7D8B1EEAE9DC00445626 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		D632EC491EE6E89D005836F5 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		D632EC4B1EE6FCDC005836F5 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		D670632B1EE9E0E900E80D13 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		D6BB7D8B1EEAE9DC00445626 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		D632EC371EE42FCA005836F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D6BB7D8B1EEAE9DC00445626 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				D632EC4A1EE6E89D005836F5 /* CircleView.swift in Sources */,
 				D632EC441EE4D350005836F5 /* FancyField.swift in Sources */,
 				D632EC261EE42C4A005836F5 /* SignInVC.swift in Sources */,
+				D6BB7D8C1EEAE9DC00445626 /* Post.swift in Sources */,
 				D632EC421EE4D1B4005836F5 /* RoundButton.swift in Sources */,
 				D632EC461EE4D516005836F5 /* FancyButton.swift in Sources */,
 				D670632C1EE9E0E900E80D13 /* DataService.swift in Sources */,
