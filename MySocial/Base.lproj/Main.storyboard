@@ -213,6 +213,9 @@
                                                 <state key="normal" title="Post">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="postButtonPressed:" destination="nDQ-dy-EDg" eventType="touchUpInside" id="5pe-ST-uxf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -335,6 +338,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="3pf-sF-ecU" id="63Q-ge-qRS"/>
+                                            <outlet property="likeImg" destination="2Hk-vf-q8O" id="WSa-HL-6cZ"/>
                                             <outlet property="likesLbl" destination="fBa-r9-8h5" id="kxJ-3c-bwk"/>
                                             <outlet property="postImg" destination="thC-rj-8JV" id="kRf-cW-zI5"/>
                                             <outlet property="profileImg" destination="glH-Pj-QJZ" id="2cD-8B-VNv"/>
@@ -359,6 +363,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="captionField" destination="r13-vu-dQs" id="XJ4-Xh-dW0"/>
                         <outlet property="imageAdd" destination="LSc-xh-VaO" id="ceH-6v-GOV"/>
                         <outlet property="tableView" destination="lu9-uc-RkK" id="ymo-yw-dsk"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="xYQ-PK-ZvQ"/>
